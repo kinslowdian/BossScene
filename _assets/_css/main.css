@@ -719,20 +719,20 @@ html, body
 
 	.portal .portal_space
 	{
-		width: 70px;
-		height: 70px;
+		width: 60px;
+		height: 60px;
 
 		background: #ff0070;
 
 		position: absolute;
 
-		left: 5px;
-		top: 5px;
+		-webkit-transform: translate(10px, 10px);
+		transform: translate(10px, 10px);
 
 		overflow: hidden;
 
-		/*PORTAL Z-LOCK*/
-		/*z-index: 0;*/
+		border-radius: 30px;
+		box-shadow: 0px 0px 40px rgba(255, 0, 112, 0.6);
 	}
 
 	.portal_level_warp
@@ -952,6 +952,11 @@ html, body
 		transform			: translate(41px, 17px);
 
 		/*z-index: 1;*/
+	}
+
+	.boss-body .portal_space
+	{
+		box-shadow: 0px 0px 60px rgba(255, 0, 112, 0.8) !important;
 	}
 
 	.boss-armL-Cont
