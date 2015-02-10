@@ -1,0 +1,32 @@
+
+.pixels_pineTreeMassT0
+{
+	background-image: url(../_img/tile_pineTreesMassT0_1x.png);
+	background-repeat: repeat;
+	background-position: center top;
+	background-size: 240px 240px;
+}
+
+.pixels_waterFallFloor
+{
+	background-image: url(../_img/waterFallFloor_1x.png);
+	background-repeat: repeat-x;
+	background-position: center top;
+	background-size: 80px 4px;
+}
+
+.pixels_bossShadow
+{
+	background-image: url(../_img/bossShadow_1x.png);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	background-size: 282px 260px;
+}
+
+.pixels_finalMountain
+{
+	background-image: url(../_img/finalEndMountain_1x.png);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	background-size: 280px 90px;
+}
