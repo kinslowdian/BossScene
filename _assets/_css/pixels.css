@@ -30,3 +30,19 @@
 	background-position: 0 0;
 	background-size: 280px 90px;
 }
+
+.pixels_bossDeathBird
+{
+	background-image: url(../_img/bossDeathBird_1x.png);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	background-size: 40px 40px;
+}
+
+.pixels_bossDeathTrees
+{
+	background-image: url(../_img/bossDeathTile_1x.png);
+	background-repeat: repeat;
+	background-position: center top;
+	background-size: 240px 240px;
+}

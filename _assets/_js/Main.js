@@ -9,5 +9,5 @@ function init()
 
 function run()
 {
-	finalLevelSeq_zoom();
+	finalLevelSeq_init();
 }

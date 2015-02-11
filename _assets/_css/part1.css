@@ -5,10 +5,42 @@
 
 	position: absolute;
 
+	overflow: hidden;
+
 	left: 0; right: 0; top: 0; bottom: 0;
 }
 
-.finalLevel_part1, .finalLevel_part2
+.finalLevelPart_showX
+{
+	-webkit-transform: translateX(0%);
+	transform: translateX(0%);
+}
+
+.finalLevelPart_hideX
+{
+	-webkit-transform: translateX(100%);
+	transform: translateX(100%);
+}
+
+.finalLevelPart_showY
+{
+	-webkit-transform: translateY(0%);
+	transform: translateY(0%);
+}
+
+.finalLevelPart_hideY
+{
+	-webkit-transform: translateY(-100%);
+	transform: translateY(-100%);
+}
+
+.tween-finalLevelPart
+{
+	-webkit-transition: -webkit-transform 400ms ease-out;
+	transition: transform 400ms ease-out;
+}
+
+.finalLevel_part1
 {
 	width: 100%;
 	height: 100%;
@@ -297,6 +329,33 @@
 	opacity: 0.4;
 }
 
+.finalLevel_lightFlare
+{
+	width: 100%;
+	height: 100%;
+
+	position: absolute;
+
+	background: rgba(255, 255, 255, 0.86);
+}
+
+.finalLevelLightFlare_hide
+{
+	opacity: 0;
+}
+
+.finalLevelLightFlare_show
+{
+	opacity: 1;
+}
+
+.tween-finalLevelLightFlare
+{
+	-webkit-transition: opacity 3s ease-out;
+	transition: opacity 3s ease-out;
+}
+
+
 .tween-finalLevelBossJump0
 {
 	-webkit-animation: tweenFinalLevelBossJump0Frames 400ms linear forwards;
@@ -408,4 +467,44 @@
 
 	left: -280px;
 	top: -80px;
+}
+
+
+.finalLevel_portalLight
+{
+	width: 300px;
+	height: 70%;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: 0 auto;
+
+	background: -webkit-linear-gradient(top, rgba(255, 0, 112, 0.8) 0%,rgba(255, 0, 112, 0) 100%);
+	background: linear-gradient(to bottom, rgba(255, 0, 112, 0.8) 0%,rgba(255, 0, 112, 0) 100%);
+
+	box-shadow: 0px -40px 40px rgba(255, 0, 112, 0.4);
+}
+
+.finalLevelPortalLight_hide
+{
+	opacity: 0;
+
+	-webkit-transform: translateY(-100%);
+	transform: translateY(-100%);
+}
+
+.finalLevelPortalLight_show
+{
+	opacity: 1;
+
+	-webkit-transform: translateY(0%);
+	transform: translateY(0%);
+}
+
+.tween-finalLevelPortalLight
+{
+	-webkit-transition: 1500ms ease-out;
+	transition: 1500ms ease-out;
 }
