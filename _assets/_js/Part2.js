@@ -21,14 +21,25 @@ function endDeathScene_init()
 
 function endDeathScene_run()
 {
+	$("#finalLevel_wrapper .finalLevel_part2").html(finalLevelKit.html.endDeathScene);
 
+	$("#finalLevel_wrapper .finalLevel_part2")[0].addEventListener("webkitTransitionEnd", endDeathScene_inPlace, false);
+	$("#finalLevel_wrapper .finalLevel_part2")[0].addEventListener("transitionend", endDeathScene_inPlace, false);
+
+	$("#finalLevel_wrapper .finalLevel_part2").removeClass("finalLevelPart_hideX").addClass("finalLevelPart_showX");
 }
 
 function endDeathScene_inPlace(event)
 {
+	$("#finalLevel_wrapper .finalLevel_part2")[0].removeEventListener("webkitTransitionEnd", endDeathScene_inPlace, false);
+	$("#finalLevel_wrapper .finalLevel_part2")[0].removeEventListener("transitionend", endDeathScene_inPlace, false);
+
+	$("#finalLevel_wrapper .finalLevel_part2 .finalLevel_lightFlare").removeClass("finalLevelLightFlare_show").addClass('finalLevelLightFlare_hide');
+
 	finalLevelSeq_purge();
 
 	endDeathScene_portalOpen();
+
 }
 
 function endDeathScene_populate()

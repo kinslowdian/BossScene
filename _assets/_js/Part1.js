@@ -182,6 +182,10 @@ function finalLevelSeq_bossDefeat()
 	$("#finalLevel_wrapper .finalLevel_part1 .tween-cloudySky")[0].addEventListener("transitionend", finalLevelSeq_bossDefeatEvent, false);
 
 	$("#finalLevel_wrapper .finalLevel_part1 .cloudySky").removeClass("cloudySky_show").addClass("cloudySky_hide");
+
+	$("#finalLevel_wrapper .finalLevel_part1 #finalLevel-boss .boss-face").removeClass("boss-face-default").addClass("boss-face-dead");
+
+	$("#finalLevel_wrapper .finalLevel_part1 .portal_bleed .portal_bleed_drop").removeClass("portal_bleed_drop_hide").addClass("portal_bleed_drop_show");
 }
 
 function finalLevelSeq_bossDefeatEvent(event)

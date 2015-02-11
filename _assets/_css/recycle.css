@@ -1255,3 +1255,82 @@
 	/*---------------------MOVEMENT & CONTROL*/
 
 /* ----------------------------------------------------------------------- PLAYER */
+
+.portal_bleed
+{
+	width: 44px;
+
+	position: absolute;
+
+	left: 0; right: 0; top: 0; bottom: 0;
+
+	margin: 60px auto 0 auto;
+
+	z-index: 2;
+}
+
+.portal_bleed_drop
+{
+	width: 2px;
+
+	background: #ff0070;
+
+	position: absolute;
+
+	top: 0;
+
+	-webkit-transform-origin: 50% 0%;
+	transform-origin: 50% 0%;
+
+	box-shadow: 0px 0px 40px rgba(255, 0, 112, 0.6);
+
+}
+
+.tween-portal_drop
+{
+	-webkit-transition: 300ms linear;
+	transition: 300ms linear;
+}
+
+.portal_bleed_drop_hide
+{
+	-webkit-transform: scaleY(0);
+	transform: scaleY(0);
+}
+
+.portal_bleed_drop_show
+{
+	-webkit-transform: scaleY(1);
+	transform: scaleY(1);
+}
+
+.portal_bleed_drop0
+{
+	height: 40px;
+
+	-webkit-transition-delay: 0ms;
+	transition-delay: 0ms;
+
+	left: 0;
+}
+
+.portal_bleed_drop1
+{
+	height: 80px;
+
+	-webkit-transition-delay: 100ms;
+	transition-delay: 100ms;
+
+	left: 4px;
+}
+
+.portal_bleed_drop2
+{
+	height: 20px;
+
+	-webkit-transition-delay: 200ms;
+	transition-delay: 200ms;
+
+	left: 8px;
+}
+

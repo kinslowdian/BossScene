@@ -2,7 +2,9 @@
 .finalLevel_part2
 {
 	width: 100%;
-	height: 2000px;
+	height: 200%;
+
+	overflow: hidden;
 
 	position: absolute;
 
@@ -34,7 +36,7 @@
 .fieldStrip
 {
 	width: 320px;
-	height: 2000px;
+	height: 200%;
 
 	background: #e5eaa4;
 
