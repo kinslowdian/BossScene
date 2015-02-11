@@ -378,7 +378,7 @@
 	100% 	{ transform: translateY(-300%); }
 }
 
-#finalLevel-boss
+.finalLevel_bossPart1
 {
 	width: 320px;
 	height: 280px;
@@ -389,7 +389,7 @@
 	transform: translateY(-260px);
 }
 
-#finalLevel-boss .bossCont
+.finalLevel_bossPart1 .bossCont
 {
 	-webkit-transform: translateY(-200%);
 	transform: translateY(-200%);
@@ -448,7 +448,7 @@
 }
 
 
-#finalLevel_player
+.finalLevel_player
 {
 	width: 40px;
 	height: 40px;

@@ -47,7 +47,7 @@
 	margin: 0 auto;
 }
 
-.finalLevelEnd_bossLeavePortal
+.finalLevelEnd_bossPart2LeavePortal
 {
   width: 300px;
   height: 150px;
@@ -88,7 +88,7 @@
 }
 
 
-#finalLevelEnd_boss
+.finalLevelEnd_bossPart2
 {
 	width: 320px;
 	height: 260px;
@@ -283,7 +283,7 @@
 	100%	{ transform: translateY(0px); }
 }
 
-.tween-tween-finalLevelEndBossDeath1
+.tween-finalLevelEndBossDeath1
 {
 	-webkit-animation: tweenFinalLevelEndBossDeath1Frames 500ms ease-in forwards;
 	animation: tweenFinalLevelEndBossDeath1Frames 500ms ease-in forwards;
@@ -299,95 +299,4 @@
 {
 	0%		{ transform: scale(1) translateY(180px); }
 	100%	{ transform: scale(0) translateY(-400px); }
-}
-
-
-.finalLevelEnd_infoBox
-{
-	width: 300px;
-
-	position: absolute;
-
-	left: 0; right: 0; bottom: 40px;
-
-	margin: 0 auto;
-
-	font-size: 33px;
-	text-transform: uppercase;
-}
-
-.finalLevelEnd_infoBox h1
-{
-	font-size: 1em;
-	line-height: 1;
-	margin-bottom: 0.8em;
-
-	color: #ff0070;
-}
-
-.finalLevelEnd_infoBox h2
-{
-	font-size: 0.6em;
-	line-height: 1.2em;
-	margin-bottom: 0.8em;
-
-	color: #ff0070;
-}
-
-.finalLevelEnd_infoBox h3
-{
-	font-size: 0.4em;
-	line-height: 1;
-}
-
-.finalLevelEnd_infoBox h3:first-of-type
-{
-	margin-bottom: 1em;
-
-	color: #ff0070;
-}
-
-.finalLevelEnd_infoBox h3:last-of-type
-{
-	margin-bottom: 0.5em;
-
-	color: #20202a;
-}
-
-
-
-.finalLevelEnd_infoBox p
-{
-	font-size: 0.3em;
-	line-height: 1;
-
-	color: #20202a;
-}
-
-
-.tween-finalLevelEndInfoBox
-{
-	-webkit-transition: 500ms linear;
-	transition: 500ms linear;
-}
-
-.finalLevelEndInfoBox_hide
-{
-	opacity: 0;
-
-	-webkit-transform: translateY(20px);
-	transform: translateY(20px);
-}
-
-.finalLevelEndInfoBox_show
-{
-	opacity: 1;
-
-	-webkit-transform: translateY(0px);
-	transform: translateY(0px);
-}
-
-.finalLevelEndInfoBox_white
-{
-	color: #17e69d !important;
 }

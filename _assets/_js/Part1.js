@@ -97,16 +97,16 @@ function finalLevelSeq_bossJump0Event(event)
 
 	$("#finalLevel_wrapper .finalLevel_part1 .finalLevel_container_bossShadow").remove();
 
-	$("#finalLevel_wrapper .finalLevel_part1 #finalLevel-boss .boss-face").removeClass("boss-face-default").addClass("boss-face-happy");
+	$("#finalLevel_wrapper .finalLevel_part1 .finalLevel_bossPart1 .boss-face").removeClass("boss-face-default").addClass("boss-face-happy");
 
-	$("#finalLevel_wrapper .finalLevel_part1 #finalLevel-boss .bossCont").addClass("tween-finalLevelBossJump1");
+	$("#finalLevel_wrapper .finalLevel_part1 .finalLevel_bossPart1 .bossCont").addClass("tween-finalLevelBossJump1");
 
-	$("#finalLevel_wrapper .finalLevel_part1 #finalLevel-boss .boss-armL-Cont").removeClass("boss-armL-Cont-UP");
-	$("#finalLevel_wrapper .finalLevel_part1 #finalLevel-boss .boss-armR-Cont").removeClass("boss-armL-Cont-UP");
+	$("#finalLevel_wrapper .finalLevel_part1 .finalLevel_bossPart1 .boss-armL-Cont").removeClass("boss-armL-Cont-UP");
+	$("#finalLevel_wrapper .finalLevel_part1 .finalLevel_bossPart1 .boss-armR-Cont").removeClass("boss-armL-Cont-UP");
 
 	$("#finalLevel_wrapper .finalLevel_part1 .finalLevel_land").addClass("tween-finalLevelBossJumpGround");
 
-	$("#finalLevel_wrapper .finalLevel_part1 #finalLevel_player .map-goat-head").addClass("mapPlayer_head_fear");
+	$("#finalLevel_wrapper .finalLevel_part1 .finalLevel_player .map-goat-head").addClass("mapPlayer_head_fear");
 
 	$("#finalLevel_wrapper .finalLevel_part1 .finalLevel_land")[0].addEventListener("webkitAnimationEnd", finalLevelSeq_bossJumpEnd, false);
 	$("#finalLevel_wrapper .finalLevel_part1 .finalLevel_land")[0].addEventListener("animationend", finalLevelSeq_bossJumpEnd, false);
@@ -123,9 +123,9 @@ function finalLevelSeq_bossJumpEnd(event)
 
 	$("#finalLevel_wrapper .finalLevel_part1 .sun_inner").removeClass("tween-finalLevelSun").addClass("tween-finalLevel");
 
-	$("#finalLevel_wrapper .finalLevel_part1 #finalLevel_player .map-goat-head").removeClass("mapPlayer_head_fear");
+	$("#finalLevel_wrapper .finalLevel_part1 .finalLevel_player .map-goat-head").removeClass("mapPlayer_head_fear");
 
-	$("#finalLevel_wrapper .finalLevel_part1 #finalLevel-boss .boss-face").removeClass("boss-face-happy").addClass("boss-face-default");
+	$("#finalLevel_wrapper .finalLevel_part1 .finalLevel_bossPart1 .boss-face").removeClass("boss-face-happy").addClass("boss-face-default");
 
 	delay = setTimeout(finalLevelSeq_focusBoss, 1 * 1000);
 }
@@ -183,7 +183,7 @@ function finalLevelSeq_bossDefeat()
 
 	$("#finalLevel_wrapper .finalLevel_part1 .cloudySky").removeClass("cloudySky_show").addClass("cloudySky_hide");
 
-	$("#finalLevel_wrapper .finalLevel_part1 #finalLevel-boss .boss-face").removeClass("boss-face-default").addClass("boss-face-dead");
+	$("#finalLevel_wrapper .finalLevel_part1 .finalLevel_bossPart1 .boss-face").removeClass("boss-face-default").addClass("boss-face-dead");
 
 	$("#finalLevel_wrapper .finalLevel_part1 .portal_bleed .portal_bleed_drop").removeClass("portal_bleed_drop_hide").addClass("portal_bleed_drop_show");
 }

@@ -35,6 +35,21 @@
 
 
 
+	.font-dosis
+	{
+		font-family: 'Dosis', sans-serif;
+
+		font-weight: lighter;
+		font-variant: normal;
+		font-style: normal;
+
+		-webkit-font-smoothing	: antialiased;
+		font-smoothing			: antialiased;
+	}
+
+
+
+
 
 
 
