@@ -15,7 +15,7 @@ function endDeathScene_init()
 	finalLevelKit.displayText.line1 = "this forest is now free from worm holes.";
 	finalLevelKit.displayText.lineDy0 = "you were defeated ";
 	finalLevelKit.displayText.lineDy1 = " times.";
-	
+
 	finalLevelKit.html.endDeathScene = $("#finalLevel_wrapper .finalLevel_part2").html();
 
 	$("#finalLevel_wrapper .finalLevel_part2").html("");
@@ -42,8 +42,9 @@ function endDeathScene_inPlace(event)
 
 	finalLevelSeq_purge();
 
-	endDeathScene_portalOpen();
+	// endDeathScene_portalOpen();
 
+	endDeathScene_scroll();
 }
 
 function endDeathScene_populate()
@@ -59,12 +60,25 @@ function endDeathScene_populate()
 	$("#finalLevel_wrapper .finalLevel_part3 .finalLevelEnd_infoBox .finalLevelEndInfoBoxText2").html(defeatString);
 }
 
-function endDeathScene_portalOpen()
+function endDeathScene_scroll()
 {
+	$("#finalLevel_wrapper .finalLevel_part2 .finalLevel_part2_inner")[0].addEventListener("webkitTransitionEnd", endDeathScene_portalOpen, false);
+	$("#finalLevel_wrapper .finalLevel_part2 .finalLevel_part2_inner")[0].addEventListener("transitionend", endDeathScene_portalOpen, false);
+
+	$("#finalLevel_wrapper .finalLevel_part2 .finalLevel_part2_inner").removeClass("finalLevelPart2Inner_start").addClass("finalLevelPart2Inner_show");
+}
+
+function endDeathScene_portalOpen(event)
+{
+	$("#finalLevel_wrapper .finalLevel_part2 .finalLevel_part2_inner")[0].removeEventListener("webkitTransitionEnd", endDeathScene_portalOpen, false);
+	$("#finalLevel_wrapper .finalLevel_part2 .finalLevel_part2_inner")[0].removeEventListener("transitionend", endDeathScene_portalOpen, false);
+
 	$("#finalLevel_wrapper .finalLevel_part2 .tween-bossLeavePortal")[0].addEventListener("webkitTransitionEnd", endDeathScene_bossRemove0, false);
 	$("#finalLevel_wrapper .finalLevel_part2 .tween-bossLeavePortal")[0].addEventListener("transitionend", endDeathScene_bossRemove0, false);
 
 	$("#finalLevel_wrapper .finalLevel_part2 .finalLevelEnd_bossPart2LeavePortal").removeClass("bossLeavePortal_hide").addClass("bossLeavePortal_show");
+
+	$("#finalLevel_wrapper .finalLevel_part2 .finalLevel_lightFlare").remove();
 }
 
 function endDeathScene_bossRemove0(event)
@@ -133,36 +147,20 @@ function endDeathScene_portalCloseEvent(event)
 
 	$("#finalLevel_wrapper").addClass("finalLevelEndWrapperFocus");
 	*/
-	
-	$("#finalLevel_wrapper .finalLevel_part2")[0].addEventListener("webkitTransitionEnd", endDeathScene_sceneFocusEnd, false);
-	$("#finalLevel_wrapper .finalLevel_part2")[0].addEventListener("transitionend", endDeathScene_sceneFocusEnd, false);
-	
-	$("#finalLevel_wrapper .finalLevel_part2").addClass("finalLevelEndWrapperFocus");
+
+	$("#finalLevel_wrapper .finalLevel_part2 .finalLevel_part2_inner")[0].addEventListener("webkitTransitionEnd", endDeathScene_sceneFocusEnd, false);
+	$("#finalLevel_wrapper .finalLevel_part2 .finalLevel_part2_inner")[0].addEventListener("transitionend", endDeathScene_sceneFocusEnd, false);
+
+	// $("#finalLevel_wrapper .finalLevel_part2 .finalLevel_part2_inner").addClass("finalLevelEndWrapperFocus");
+
+	$("#finalLevel_wrapper .finalLevel_part2 .finalLevel_part2_inner").removeClass("finalLevelPart2Inner_show").addClass("finalLevelPart2Inner_end");
 }
 
 function endDeathScene_sceneFocusEnd(event)
 {
-	/*
-	trace(event.target);
-	if(event.target.id === "finalLevel_wrapper")
-	{
-		$("#finalLevel_wrapper")[0].removeEventListener("webkitTransitionEnd", endDeathScene_sceneFocusEnd, false);
-		$("#finalLevel_wrapper")[0].removeEventListener("transitionend", endDeathScene_sceneFocusEnd, false);
+	$("#finalLevel_wrapper .finalLevel_part2 .finalLevel_part2_inner")[0].removeEventListener("webkitTransitionEnd", endDeathScene_sceneFocusEnd, false);
+	$("#finalLevel_wrapper .finalLevel_part2 .finalLevel_part2_inner")[0].removeEventListener("transitionend", endDeathScene_sceneFocusEnd, false);
 
-		$("#finalLevel_wrapper .finalLevel_part2 .finalLevelEnd_bird_sprite")[0].addEventListener("webkitTransitionEnd", endDeathScene_birdWalk, false);
-
-		$("#finalLevel_wrapper .finalLevel_part2 .finalLevelEnd_bird_sprite")[0].addEventListener("transitionend", endDeathScene_birdWalk, false);
-
-		$("#finalLevel_wrapper .finalLevel_part2 .finalLevelEnd_bird_sprite").removeClass("finalLevelEndBirdFade_hide").addClass("finalLevelEndBirdFade_show");
-	}
-	*/
-	// TODO
-	// WALK IN
-	// HAPPY JUMP
-	
-	$("#finalLevel_wrapper .finalLevel_part2")[0].removeEventListener("webkitTransitionEnd", endDeathScene_sceneFocusEnd, false);
-	$("#finalLevel_wrapper .finalLevel_part2")[0].removeEventListener("transitionend", endDeathScene_sceneFocusEnd, false);
-	
 	$("#finalLevel_wrapper .finalLevel_part2 .finalLevelEnd_bird_sprite")[0].addEventListener("webkitTransitionEnd", endDeathScene_birdWalk, false);
 
 	$("#finalLevel_wrapper .finalLevel_part2 .finalLevelEnd_bird_sprite")[0].addEventListener("transitionend", endDeathScene_birdWalk, false);
@@ -251,4 +249,7 @@ function endDeathScene_endTitle2()
 {
 	$("#finalLevel_wrapper .finalLevel_part3 .finalLevelEndInfoBoxName0").removeClass("finalLevelEndInfoBox_hide").addClass("finalLevelEndInfoBox_show");
 	$("#finalLevel_wrapper .finalLevel_part3 .finalLevelEndInfoBoxName1").removeClass("finalLevelEndInfoBox_hide").addClass("finalLevelEndInfoBox_show");
+
+	$("#finalLevel_wrapper .finalLevel_part2 .finalLevelEnd_blossom .snow").addClass("tween-snow");
+	$("#finalLevel_wrapper .finalLevel_part2 .finalLevelEnd_blossom").removeClass("finalLevelEndBlossom_hide").addClass("finalLevelEndBlossom_show");
 }

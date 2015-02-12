@@ -130,7 +130,7 @@
 
 					</div> <!-- .bossCont -->
 
-				</div> <!-- #finalLevel-boss -->
+				</div> <!-- .finalLevel_bossPart1 -->
 
 			</div> <!-- .finalLevel_focus -->
 
@@ -200,6 +200,14 @@
 
 		</div> <!-- .finalLevel_land -->
 
+		<div class="finalLevel_rain tween-finalLevelRain finalLevelRain_hide">
+
+			<div class="rain-0 rain pixels_rain0"></div> <!-- tween-rain -->
+			<div class="rain-1 rain pixels_rain1"></div> <!-- tween-rain -->
+			<div class="rain-2 rain pixels_rain2"></div> <!-- tween-rain -->
+
+		</div>
+
 		<div class="finalLevel_night tween-finalLevelSun"></div>
 
 		<div class="finalLevel_lightFlare tween-finalLevelLightFlare finalLevelLightFlare_hide"></div>
@@ -208,128 +216,146 @@
 
 	</div> <!-- .finalLevel_part1 -->
 
+	<div class="finalLevel_battle">
+
+	</div> <!-- .finalLevel_battle -->
+
 	<div class="finalLevel_part2 tween-finalLevelPart finalLevelPart_hideX">
 
-		<div class="finalLevelEnd_fill pixels_bossDeathTrees"></div>
+		<div class="finalLevel_part2_inner tween-finalLevelPart2Inner finalLevelPart2Inner_start">
 
-		<div class="fieldStrip">
+			<div class="finalLevelEnd_fill pixels_bossDeathTrees"></div>
 
-			<div class="finalLevelEnd_bossPart2LeavePortal tween-bossLeavePortal bossLeavePortal_hide"></div>
+			<div class="fieldStrip">
 
-			<div class="finalLevelEnd_bossPart2 tween-finalLevelEndBoss">
+				<div class="finalLevelEnd_bossPart2LeavePortal tween-bossLeavePortal bossLeavePortal_hide"></div>
 
-				<div class="bossCont">
+				<div class="finalLevelEnd_bossPart2 tween-finalLevelEndBoss">
 
-					<div class="boss">
+					<div class="bossCont">
 
-						<div class="boss-legs">
+						<div class="boss">
 
-							<div class="boss-legL pixels_boss"></div>
-							<div class="boss-legR pixels_boss"></div>
+							<div class="boss-legs">
 
-						</div>
-
-						<div class="boss-top tween-boss-top">
-
-							<div class="boss-armL-Cont">
-
-								<div class="boss-armL tween-boss-armL">
-
-									<div class="boss-lowerArmL pixels_boss tween-boss-lowArmL"></div>
-									<div class="boss-upperArmL pixels_boss"></div>
-
-								</div>
+								<div class="boss-legL pixels_boss"></div>
+								<div class="boss-legR pixels_boss"></div>
 
 							</div>
 
-							<div class="boss-armR-Cont">
+							<div class="boss-top tween-boss-top">
 
-								<div class="boss-armR tween-boss-armR">
+								<div class="boss-armL-Cont">
 
-									<div class="boss-lowerArmR pixels_boss tween-boss-lowArmR"></div>
-									<div class="boss-upperArmR pixels_boss"></div>
+									<div class="boss-armL tween-boss-armL">
 
-								</div>
-
-							</div>
-
-							<div class="boss-body pixels_boss">
-
-								<div class="portal tweenFlickerFixManualAll">
-
-									<div class="portal_space">
-
-										<div class="portal_stars0 tween-portalStars pixels_portalBoss"></div>
-
-										<div class="portal_stars1 tween-portalStars pixels_portalBoss"></div>
-
-										<div class="portal_stars2 tween-portalStars pixels_portalBoss"></div>
-
-									</div>
-
-									<div class="portal_bleed">
-
-										<div class="portal_bleed_drop portal_bleed_drop0 tween-portal_drop portal_bleed_drop_show"></div>
-										<div class="portal_bleed_drop portal_bleed_drop1 tween-portal_drop portal_bleed_drop_show"></div>
-										<div class="portal_bleed_drop portal_bleed_drop2 tween-portal_drop portal_bleed_drop_show"></div>
+										<div class="boss-lowerArmL pixels_boss tween-boss-lowArmL"></div>
+										<div class="boss-upperArmL pixels_boss"></div>
 
 									</div>
 
 								</div>
 
+								<div class="boss-armR-Cont">
+
+									<div class="boss-armR tween-boss-armR">
+
+										<div class="boss-lowerArmR pixels_boss tween-boss-lowArmR"></div>
+										<div class="boss-upperArmR pixels_boss"></div>
+
+									</div>
+
+								</div>
+
+								<div class="boss-body pixels_boss">
+
+									<div class="portal tweenFlickerFixManualAll">
+
+										<div class="portal_space">
+
+											<div class="portal_stars0 tween-portalStars pixels_portalBoss"></div>
+
+											<div class="portal_stars1 tween-portalStars pixels_portalBoss"></div>
+
+											<div class="portal_stars2 tween-portalStars pixels_portalBoss"></div>
+
+										</div>
+
+										<div class="portal_bleed">
+
+											<div class="portal_bleed_drop portal_bleed_drop0 tween-portal_drop portal_bleed_drop_show"></div>
+											<div class="portal_bleed_drop portal_bleed_drop1 tween-portal_drop portal_bleed_drop_show"></div>
+											<div class="portal_bleed_drop portal_bleed_drop2 tween-portal_drop portal_bleed_drop_show"></div>
+
+										</div>
+
+									</div>
+
+								</div>
+
+								<div class="boss-head pixels_boss tween-boss-head">
+
+									<div class="boss-face boss-face-dead pixels_boss"></div>
+
+								</div>
+
 							</div>
 
-							<div class="boss-head pixels_boss tween-boss-head">
+						</div> <!-- .boss -->
 
-								<div class="boss-face boss-face-dead pixels_boss"></div>
+					</div> <!-- .bossCont -->
+
+				</div> <!-- .finalLevelEnd_bossPart2 -->
+
+				<div class="finalLevelEnd_playerSlot">
+
+					<div class="finalLevelEnd_bird_L finalLevelEnd_bird"> <!-- tween-finalLevelEndBird -->
+
+						<div class="finalLevelEnd_bird_cont tween-finalLevelEndBirdCont finalLevelEndBirdCont_hideL">
+
+							<div class="finalLevelEnd_bird_sprite pixels_bossDeathBird tween-finalLevelEndBirdFade finalLevelEndBirdFade_hide"></div>
+
+						</div>
+
+					</div>
+
+					<div class="finalLevelEnd_player">
+
+						<div class="player-sprite tween-player-XX">
+
+							<div class="map-goat-legs pixels_map_player tween-mapPlayerWalk_stop"></div>
+
+							<div class="map-goat-body pixels_map_player"></div>
+
+							<div class="map-goat-head pixels_map_player tween-map-goat-head"></div>
+
+							<div class="map-goat-hand-L pixels_map_player tween-map-goat-hand-L"></div>
+							<div class="map-goat-hand-R pixels_map_player tween-map-goat-hand-R"></div>
+
+							<div class="map-goat-hide map-goat-hide-default">
+
+								<div class="map-goat-hide-aware pixels_travelEvent"></div>
+								<div class="map-goat-hide-inner pixels_travelEvent"></div>
+
+							</div>
+
+							<div class="map-goat-battleFace tween-map-goat-battleFace">
+
+								<div class="map-goat-battleFace-inner pixels_travelEvent tween-map-goat-battleFace-inner"></div>
+
+								<div class="map-goat-battleSpeech pixels_travelEvent tween-map-goat-battleSpeech"></div>
 
 							</div>
 
 						</div>
 
-					</div> <!-- .boss -->
-
-				</div> <!-- .bossCont -->
-
-			</div> <!-- #finalLevelEnd_bossPart2 -->
-
-			<div class="finalLevelEnd_playerSlot">
-
-				<div class="finalLevelEnd_bird_L finalLevelEnd_bird"> <!-- tween-finalLevelEndBird -->
-
-					<div class="finalLevelEnd_bird_cont tween-finalLevelEndBirdCont finalLevelEndBirdCont_hideL">
-
-						<div class="finalLevelEnd_bird_sprite pixels_bossDeathBird tween-finalLevelEndBirdFade finalLevelEndBirdFade_hide"></div>
-
 					</div>
 
-				</div>
+					<div class="finalLevelEnd_bird_R finalLevelEnd_bird finalLevelEndBirdDelay"> <!-- tween-finalLevelEndBird -->
 
-				<div class="finalLevelEnd_player">
+						<div class="finalLevelEnd_bird_cont tween-finalLevelEndBirdCont finalLevelEndBirdCont_hideR">
 
-					<div class="player-sprite tween-player-XX">
-
-						<div class="map-goat-legs pixels_map_player tween-mapPlayerWalk_stop"></div>
-
-						<div class="map-goat-body pixels_map_player"></div>
-
-						<div class="map-goat-head pixels_map_player tween-map-goat-head"></div>
-
-						<div class="map-goat-hand-L pixels_map_player tween-map-goat-hand-L"></div>
-						<div class="map-goat-hand-R pixels_map_player tween-map-goat-hand-R"></div>
-
-						<div class="map-goat-hide map-goat-hide-default">
-
-							<div class="map-goat-hide-aware pixels_travelEvent"></div>
-							<div class="map-goat-hide-inner pixels_travelEvent"></div>
-
-						</div>
-
-						<div class="map-goat-battleFace tween-map-goat-battleFace">
-
-							<div class="map-goat-battleFace-inner pixels_travelEvent tween-map-goat-battleFace-inner"></div>
-
-							<div class="map-goat-battleSpeech pixels_travelEvent tween-map-goat-battleSpeech"></div>
+							<div class="finalLevelEnd_bird_sprite pixels_bossDeathBird finalLevelEnd_bird_sprite_flip tween-finalLevelEndBirdFade finalLevelEndBirdFade_hide"></div>
 
 						</div>
 
@@ -337,38 +363,36 @@
 
 				</div>
 
-				<div class="finalLevelEnd_bird_R finalLevelEnd_bird finalLevelEndBirdDelay"> <!-- tween-finalLevelEndBird -->
+			</div> <!-- .fieldStrip -->
 
-					<div class="finalLevelEnd_bird_cont tween-finalLevelEndBirdCont finalLevelEndBirdCont_hideR">
-
-						<div class="finalLevelEnd_bird_sprite pixels_bossDeathBird finalLevelEnd_bird_sprite_flip tween-finalLevelEndBirdFade finalLevelEndBirdFade_hide"></div>
-
-					</div>
-
-				</div>
-
-			</div>
-
-		</div> <!-- .fieldStrip -->
+		</div> <!-- .finalLevel_part2_inner -->
 
 		<div class="finalLevel_lightFlare tween-finalLevelLightFlare finalLevelLightFlare_show"></div>
 
+		<div class="finalLevelEnd_blossom tween-finalLevelEndBlossom finalLevelEndBlossom_hide">
+
+			<div class="snow-0 snow pixels_blossom0"></div> <!-- tween-snow -->
+			<div class="snow-1 snow pixels_blossom1"></div> <!-- tween-snow -->
+			<div class="snow-2 snow pixels_blossom2"></div> <!-- tween-snow -->
+
+		</div>
+
 	</div> <!-- .finalLevel_part2 -->
-	
+
 	<div class="finalLevel_part3">
-	
+
 		<div class="finalLevelEnd_infoBox tween-finalLevelEndInfoBox finalLevelEndInfoBox_hide">
-		
+
 			<h1 class="finalLevelEndInfoBoxText0 font-dosis tween-finalLevelEndInfoBox finalLevelEndInfoBox_white"></h1>
 			<h2 class="finalLevelEndInfoBoxText1 font-dosis tween-finalLevelEndInfoBox finalLevelEndInfoBox_white"></h2>
 			<h3 class="finalLevelEndInfoBoxText2 font-dosis tween-finalLevelEndInfoBox finalLevelEndInfoBox_hide finalLevelEndInfoBox_white"></h3>
-		
+
 			<h3 class="finalLevelEndInfoBoxName0 font-dosis tween-finalLevelEndInfoBox finalLevelEndInfoBox_hide finalLevelEndInfoBox_white">Pixels and code by Simon Kinslow</h3>
 			<p class="finalLevelEndInfoBoxName1 font-dosis tween-finalLevelEndInfoBox finalLevelEndInfoBox_hide finalLevelEndInfoBox_white">MMXIII - MMXV</p>
-		
+
 		</div>
-	
-	</div>
+
+	</div> <!-- .finalLevel_part3 -->
 
 </div> <!-- #finalLevel_wrapper -->
 

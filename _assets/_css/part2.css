@@ -2,9 +2,19 @@
 .finalLevel_part2
 {
 	width: 100%;
-	height: 200%;
+	height: 100%;
 
 	overflow: hidden;
+
+	position: absolute;
+
+	left: 0; right: 0; top: 0; bottom: 0;
+}
+
+.finalLevel_part2_inner
+{
+	width: 100%;
+	height: 300%;
 
 	position: absolute;
 
@@ -21,13 +31,25 @@
 	left: 0; right: 0; top: 0; bottom: 0;
 }
 
-.tween-finalLevelEndWrapper
+.tween-finalLevelPart2Inner
 {
 	-webkit-transition: 3s ease-in-out;
 	transition: 3s ease-in-out;
 }
 
-.finalLevelEndWrapperFocus
+.finalLevelPart2Inner_start
+{
+	-webkit-transform: translateY(-200%);
+	transform: translateY(-200%);
+}
+
+.finalLevelPart2Inner_show
+{
+	-webkit-transform: translateY(0%);
+	transform: translateY(0%);
+}
+
+.finalLevelPart2Inner_end
 {
 	-webkit-transform: translateY(-360px);
 	transform: translateY(-360px);
@@ -36,7 +58,8 @@
 .fieldStrip
 {
 	width: 320px;
-	height: 200%;
+	/* height: 300%; */
+	height: inherit;
 
 	background: #e5eaa4;
 
@@ -299,4 +322,31 @@
 {
 	0%		{ transform: scale(1) translateY(180px); }
 	100%	{ transform: scale(0) translateY(-400px); }
+}
+
+
+.finalLevelEnd_blossom
+{
+	width: 100%;
+	height: 100%;
+
+	position: absolute;
+
+	left: 0; right: 0; top: 0; bottom: 0;
+}
+
+.tween-finalLevelEndBlossom
+{
+	-webkit-transition: 600ms linear;
+	transition: 600ms linear;
+}
+
+.finalLevelEndBlossom_hide
+{
+	opacity: 0;
+}
+
+.finalLevelEndBlossom_show
+{
+	opacity: 0.4;
 }

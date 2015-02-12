@@ -158,6 +158,10 @@ function finalLevlSeq_storm(event)
 	$("#finalLevel_wrapper .finalLevel_part1 .tween-cloudySky")[0].addEventListener("transitionend", finalLevSeq_stormEvent, false);
 
 	$("#finalLevel_wrapper .finalLevel_part1 .cloudySky").removeClass("cloudySky_hide").addClass("cloudySky_show");
+	
+	$("#finalLevel_wrapper .finalLevel_part1 .finalLevel_rain .rain").addClass("tween-rain");
+	
+	$("#finalLevel_wrapper .finalLevel_part1 .finalLevel_rain").removeClass("finalLevelRain_hide").addClass("finalLevelRain_show");
 }
 
 function finalLevSeq_stormEvent(event)

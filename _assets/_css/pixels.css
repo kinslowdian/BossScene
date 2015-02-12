@@ -46,3 +46,27 @@
 	background-position: center top;
 	background-size: 240px 240px;
 }
+
+.pixels_blossom0
+{
+	background-image: url(../_img/blossom_0_1x.png);
+	background-position: center top;
+	background-repeat: repeat;
+	background-size: 320px 320px;
+}
+
+.pixels_blossom1
+{
+	background-image: url(../_img/blossom_1_1x.png);
+	background-position: center top;
+	background-repeat: repeat;
+	background-size: 320px 320px;
+}
+
+.pixels_blossom2
+{
+	background-image: url(../_img/blossom_2_1x.png);
+	background-position: center top;
+	background-repeat: repeat;
+	background-size: 320px 320px;
+}

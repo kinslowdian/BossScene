@@ -40,7 +40,7 @@
 	transition: transform 400ms ease-out;
 }
 
-.finalLevel_part1
+.finalLevel_part1, .finalLevel_battle
 {
 	width: 100%;
 	height: 100%;
@@ -509,4 +509,36 @@
 {
 	-webkit-transition: 1500ms ease-out;
 	transition: 1500ms ease-out;
+}
+
+.finalLevel_rain
+{
+	width: 100%;
+	height: 100%;
+	
+	position: absolute;
+	
+	left: 0; right: 0; top: 0; bottom: 0;
+}
+
+.tween-finalLevelRain
+{
+	-webkit-transition: 600ms linear;
+	transition: 600ms linear;
+}
+
+.finalLevelRain_hide
+{
+	opacity: 0;
+	
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.finalLevelRain_show
+{
+	opacity: 1;
+	
+	-webkit-transform: translateY(0%);
+	transform: translateY(0%);
 }

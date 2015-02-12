@@ -2,6 +2,127 @@
 /*-------------------------------------------------------------------------RECYCLE*/
 /*-------------------------------------------------------------------------RECYCLE*/
 
+	.snow
+	{
+		width: 200%;
+		height: 200%;
+
+		position: absolute;
+
+		top: -100%;
+		right: -100%;
+	}
+
+	.tween-snow
+	{
+		-webkit-animation	: tweenSnowFrames 2s linear infinite;
+		animation			: tweenSnowFrames 2s linear infinite;
+	}
+
+	@-webkit-keyframes tweenSnowFrames
+	{
+		from	{ -webkit-transform: translate(0px, 0px); }
+		to		{ -webkit-transform: translate(-320px, 320px); }
+	}
+
+	@keyframes tweenSnowFrames
+	{
+		from	{ transform: translate(0px, 0px); }
+		to		{ transform: translate(-320px, 320px); }
+	}
+
+	.snow-0
+	{
+		-webkit-animation-duration: 2s;
+		animation-duration: 2s;
+	}
+
+	.snow-1
+	{
+		-webkit-animation-duration: 4s;
+		animation-duration: 4s;
+	}
+
+	.snow-2
+	{
+		-webkit-animation-duration: 6s;
+		animation-duration: 6s;
+	}
+
+
+	.rain
+	{
+		width: 100%;
+		height: 200%;
+
+		position: absolute;
+
+		top: -100%;
+	}
+
+	.tween-rain
+	{
+		-webkit-animation	: tweenRainFrames 2s linear infinite;
+		animation			: tweenRainFrames 2s linear infinite;
+	}
+
+	@-webkit-keyframes tweenRainFrames
+	{
+		from	{ -webkit-transform: translateY(0px); }
+		to		{ -webkit-transform: translateY(320px); }
+	}
+
+	@keyframes tweenRainFrames
+	{
+		from	{ transform: translateY(0px); }
+		to		{ transform: translateY(320px); }
+	}
+
+	.rain-0
+	{
+		-webkit-animation-duration: 600ms;
+		animation-duration: 600ms;
+	}
+
+	.rain-1
+	{
+		-webkit-animation-duration: 400ms;
+		animation-duration: 400ms;
+	}
+
+	.rain-2
+	{
+		-webkit-animation-duration: 200ms;
+		animation-duration: 200ms;
+	}
+
+
+.pixels_rain0
+{
+	background-image: url(../_img/rain_0_1x.png);
+	background-position: center top;
+	background-repeat: repeat;
+	background-size: 320px 320px;
+}
+
+.pixels_rain1
+{
+	background-image: url(../_img/rain_1_1x.png);
+	background-position: center top;
+	background-repeat: repeat;
+	background-size: 320px 320px;
+}
+
+.pixels_rain2
+{
+	background-image: url(../_img/rain_2_1x.png);
+	background-position: center top;
+	background-repeat: repeat;
+	background-size: 320px 320px;
+}
+
+
+
 .pixels_behindWorld_good
 {
 		background: url(../_img/tempBG.jpg);
