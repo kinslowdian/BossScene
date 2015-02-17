@@ -1,0 +1,39 @@
+.vectors_lightningFork
+{
+	background-image: url(../_img/lightningFork.svg);
+	background-position: 0 0;
+	background-repeat: no-repeat;
+}
+
+.vectors_lightningForkTile
+{
+	background-image: url(../_img/lightningForkTile.svg);
+	background-position: left bottom;
+	background-repeat: repeat-y;
+}
+
+
+
+
+.finalLevel_stormStrike
+{
+	width: 50px;
+	height: 0;
+
+	position: absolute;
+	left: 0; right: 0; top: 0; bottom: 0;
+
+	margin: 0;
+}
+
+.finalLevel_lightning
+{
+	width: inherit;
+	height: inherit;
+
+	position: absolute;
+
+	-webkit-transform: translate(20px, -14px);
+	transform: translate(20px, -14px);
+
+}

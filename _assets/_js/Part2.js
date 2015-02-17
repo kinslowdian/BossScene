@@ -18,6 +18,10 @@ function endDeathScene_init()
 
 	finalLevelKit.html.endDeathScene = $("#finalLevel_wrapper .finalLevel_part2").html();
 
+	finalLevelKit.lightning 				= {};
+	finalLevelKit.lightning.height 	= display.screen_h;
+	finalLevelKit.lightning.setY 		= 40 - finalLevelKit.lightning.height;
+
 	$("#finalLevel_wrapper .finalLevel_part2").html("");
 
 	endDeathScene_populate();
@@ -50,6 +54,7 @@ function endDeathScene_inPlace(event)
 function endDeathScene_populate()
 {
 	var defeatString = "";
+	var css;
 
 	defeatString = finalLevelKit.displayText.lineDy0 + tempValue + finalLevelKit.displayText.lineDy1;
 
@@ -58,6 +63,14 @@ function endDeathScene_populate()
 	$("#finalLevel_wrapper .finalLevel_part3 .finalLevelEnd_infoBox .finalLevelEndInfoBoxText1").html(finalLevelKit.displayText.line1);
 
 	$("#finalLevel_wrapper .finalLevel_part3 .finalLevelEnd_infoBox .finalLevelEndInfoBoxText2").html(defeatString);
+
+	css = {
+					"height"	: finalLevelKit.lightning.height + "px",
+					"margin"	: finalLevelKit.lightning.setY + "px auto 0px auto"
+				};
+
+	$("#finalLevel_wrapper .finalLevel_stormStrike").css(css);
+
 }
 
 function endDeathScene_scroll()
