@@ -212,6 +212,11 @@ function finalLevelSeq_lightningFirstStrikeEvent(event)
 	$("#finalLevel_wrapper .finalLevel_lightning").addClass("tween-finalLevelLightning");
 
 	$("#finalLevel_wrapper .finalLevel_thunderFlash").removeClass("finalLevelThunderFlash_hide").addClass("tween-finalLevelLightning");
+
+	$("#finalLevel_wrapper .finalLevel_bossPart1 .boss-face").removeClass("boss-face-default").addClass("boss-face-happy");
+
+	$("#finalLevel_wrapper .finalLevel_part1 .finalLevel_bossPart1 .boss-armL-Cont").addClass("boss-armL-Cont-UP");
+	$("#finalLevel_wrapper .finalLevel_part1 .finalLevel_bossPart1 .boss-armR-Cont").addClass("boss-armL-Cont-UP");
 }
 
 function finalLevelSeq_lightningCloudEvent(event)
@@ -224,6 +229,8 @@ function finalLevelSeq_lightningCloudEvent(event)
 	$("#finalLevel_wrapper .finalLevel_player .player-sprite").remove();
 
 	$("#finalLevel_wrapper .finalLevel_playerAshPile").removeClass("finalLevelPlayerAshPile_hide").addClass("finalLevelPlayerAshPile_show");
+
+	$("#finalLevel_wrapper .finalLevel_playerAshPile .finalLevel_playerAshPile_eyes").addClass("tween-finalLevelPlayerAshPile");
 }
 
 function finalLevelSeq_lightningSecondStrike(event)
