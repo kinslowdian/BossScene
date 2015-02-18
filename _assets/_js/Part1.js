@@ -176,13 +176,62 @@ function finalLevSeq_stormEvent(event)
 
 	// TODO
 	// delay_demo = setTimeout(finalLevelSeq_bossDefeat, 1 * 1000);
+	delay_demo = setTimeout(finalLevelSeq_bossWin, 1 * 1000);
 }
 
 ////////////////////////////////////////////// ADDED
 
 function finalLevelSeq_bossWin()
 {
+	finalLevelSeq_lightningFirstStrike();
 
+	// $("#finalLevel_wrapper .finalLevel_lightning").addClass("tween-finalLevelLightning");
+}
+
+function finalLevelSeq_lightningFirstStrike()
+{
+	$("#finalLevel_wrapper .tween-finalLevelStormStrike")[0].addEventListener("webkitTransitionEnd", finalLevelSeq_lightningFirstStrikeEvent, false);
+	$("#finalLevel_wrapper .tween-finalLevelStormStrike")[0].addEventListener("transitionend", finalLevelSeq_lightningFirstStrikeEvent, false);
+
+	$("#finalLevel_wrapper .finalLevel_stormStrike").removeClass("finalLevelStormStrike_hide").addClass("finalLevelStormStrike_show");
+}
+
+function finalLevelSeq_lightningFirstStrikeEvent(event)
+{
+	$("#finalLevel_wrapper .tween-finalLevelStormStrike")[0].removeEventListener("webkitTransitionEnd", finalLevelSeq_lightningFirstStrikeEvent, false);
+	$("#finalLevel_wrapper .tween-finalLevelStormStrike")[0].removeEventListener("transitionend", finalLevelSeq_lightningFirstStrikeEvent, false);
+
+	$("#finalLevel_wrapper .finalLevel_lightningCloudSprite")[0].addEventListener("webkitTransitionEnd", finalLevelSeq_lightningCloudEvent, false);
+	$("#finalLevel_wrapper .finalLevel_lightningCloudSprite")[0].addEventListener("transitionend", finalLevelSeq_lightningCloudEvent, false);
+
+	$("#finalLevel_wrapper .finalLevel_lightningCloudSprite").removeClass("finalLevelLightningCloudSprite_hide").addClass("finalLevelLightningCloudSprite_show");
+
+	$("#finalLevel_wrapper .finalLevel_lightning")[0].addEventListener("webkitAnimationEnd", finalLevelSeq_lightningSecondStrike, false);
+	$("#finalLevel_wrapper .finalLevel_lightning")[0].addEventListener("animationend", finalLevelSeq_lightningSecondStrike, false);
+
+	$("#finalLevel_wrapper .finalLevel_lightning").addClass("tween-finalLevelLightning");
+
+	$("#finalLevel_wrapper .finalLevel_thunderFlash").removeClass("finalLevelThunderFlash_hide").addClass("tween-finalLevelLightning");
+}
+
+function finalLevelSeq_lightningCloudEvent(event)
+{
+	$("#finalLevel_wrapper .finalLevel_lightningCloudSprite")[0].removeEventListener("webkitTransitionEnd", finalLevelSeq_lightningCloudEvent, false);
+	$("#finalLevel_wrapper .finalLevel_lightningCloudSprite")[0].removeEventListener("transitionend", finalLevelSeq_lightningCloudEvent, false);
+
+	$("#finalLevel_wrapper .finalLevel_lightningCloudSprite").removeClass("tween-finalLevelLightningCloudSprite").addClass("tween-finalLevelLightningCloudSpriteLong");
+
+	$("#finalLevel_wrapper .finalLevel_player .player-sprite").remove();
+
+	$("#finalLevel_wrapper .finalLevel_playerAshPile").removeClass("finalLevelPlayerAshPile_hide").addClass("finalLevelPlayerAshPile_show");
+}
+
+function finalLevelSeq_lightningSecondStrike(event)
+{
+	$("#finalLevel_wrapper .finalLevel_lightning")[0].removeEventListener("webkitAnimationEnd", finalLevelSeq_lightningSecondStrike, false);
+	$("#finalLevel_wrapper .finalLevel_lightning")[0].removeEventListener("animationend", finalLevelSeq_lightningSecondStrike, false);
+
+	$("#finalLevel_wrapper .finalLevel_lightningCloudSprite").removeClass("finalLevelLightningCloudSprite_show").addClass("finalLevelLightningCloudSprite_rise");
 }
 
 ////////////////////////////////////////////// ADDED

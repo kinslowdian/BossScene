@@ -12,7 +12,43 @@
 	background-repeat: repeat-y;
 }
 
+.vectors_lightningCloud
+{
+	background-image: url(../_img/lightningCloud.svg);
+	background-position: 0 0;
+	background-repeat: no-repeat;
+}
 
+.pixels_ashPile
+{
+	background-image: url(../_img/ash_1x.png);
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	background-size: 40px 40px;
+}
+
+.finalLevel_player .player-sprite
+{
+	position: absolute;
+}
+
+.finalLevel_playerAshPile
+{
+	width: 40px;
+	height: 40px;
+
+	position: absolute;
+}
+
+.finalLevelPlayerAshPile_hide
+{
+	visibility: hidden;
+}
+
+.finalLevelPlayerAshPile_show
+{
+	visibility: visible;
+}
 
 
 .finalLevel_stormStrike
@@ -26,6 +62,22 @@
 	margin: 0;
 }
 
+.finalLevelStormStrike_hide
+{
+	opacity: 0;
+}
+
+.finalLevelStormStrike_show
+{
+	opacity: 1;
+}
+
+.tween-finalLevelStormStrike
+{
+	-webkit-transition: opacity 200ms linear;
+	transition: opacity 200ms linear;
+}
+
 .finalLevel_lightning
 {
 	width: inherit;
@@ -35,5 +87,109 @@
 
 	-webkit-transform: translate(20px, -14px);
 	transform: translate(20px, -14px);
-
 }
+
+/*TODO*/
+.tween-finalLevelLightning
+{
+	-webkit-animation: tweenFinalLevelLightningFrames 600ms linear forwards;
+	animation: tweenFinalLevelLightningFrames 600ms linear forwards;
+}
+
+@-webkit-keyframes tweenFinalLevelLightningFrames
+{
+	0%		{ opacity: 1; }
+	20%		{ opacity: 0; }
+	40%		{ opacity: 1; }
+	60%		{ opacity: 0; }
+	80%		{ opacity: 1; }
+	100%	{ opacity: 0; }
+}
+
+@keyframes tweenFinalLevelLightningFrames
+{
+	0%		{ opacity: 1; }
+	20%		{ opacity: 0; }
+	40%		{ opacity: 1; }
+	60%		{ opacity: 0; }
+	80%		{ opacity: 1; }
+	100%	{ opacity: 0; }
+}
+
+.finalLevel_lightningCloud
+{
+	width: 120px;
+	height: 70px;
+
+	position: absolute;
+
+	left: 0; right: 0; top: 0; bottom: 0;
+
+	margin: 0;
+
+	-webkit-transform: translate(-40px, 0px);
+	transform: translate(-40px, 0px);
+}
+
+.finalLevel_lightningCloudSprite
+{
+	width: inherit;
+	height: inherit;
+
+	position: absolute;
+
+	-webkit-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+}
+
+.finalLevelLightningCloudSprite_hide
+{
+	opacity: 0;
+
+	-webkit-transform: scale(0);
+	transform: scale(0);
+}
+
+.finalLevelLightningCloudSprite_show
+{
+	opacity: 1;
+
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+
+.finalLevelLightningCloudSprite_rise
+{
+	opacity: 0;
+
+	-webkit-transform: scale(1) translateY(-160px);
+	transform: scale(1) translateY(-160px);
+}
+
+.tween-finalLevelLightningCloudSprite
+{
+	-webkit-transition: 200ms ease-out;
+	transition: 200ms ease-out;
+}
+
+.tween-finalLevelLightningCloudSpriteLong
+{
+	-webkit-transition: 3s ease-out;
+	transition: 3s ease-out;
+}
+
+.finalLevel_thunderFlash
+{
+	width: inherit;
+	height: inherit;
+
+	position: absolute;
+
+	background: #000;
+}
+
+.finalLevelThunderFlash_hide
+{
+	visibility: hidden;
+}
+
