@@ -230,6 +230,9 @@ function finalLevelSeq_lightningCloudEvent(event)
 
 	$("#finalLevel_wrapper .finalLevel_playerAshPile").removeClass("finalLevelPlayerAshPile_hide").addClass("finalLevelPlayerAshPile_show");
 
+	$("#finalLevel_wrapper .finalLevel_fireLeft").removeClass("finalLevelFire_hide");
+	$("#finalLevel_wrapper .finalLevel_fireRight").removeClass("finalLevelFire_hide");
+
 	$("#finalLevel_wrapper .finalLevel_playerAshPile .finalLevel_playerAshPile_eyes").addClass("tween-finalLevelPlayerAshPile");
 }
 
